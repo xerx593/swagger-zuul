@@ -1,0 +1,28 @@
+server:
+  port: 20000
+spring:
+  application:
+    name: gateway-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+zuul:
+  host:
+    socket-timeout-millis: 6000000
+  routes:
+    employee-service:
+      path: /emp/**
+      service-id: employee-service
+      
+    product-service:
+      path: /prod/**
+      service-id: product-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
