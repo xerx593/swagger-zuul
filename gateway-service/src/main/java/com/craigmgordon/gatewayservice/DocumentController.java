@@ -17,8 +17,8 @@ public class DocumentController implements SwaggerResourcesProvider{
 	@Override
 	public List<SwaggerResource> get() {
 		List<SwaggerResource> resources = new ArrayList<>();
-		resources.add(swaggerResource("product-service", "/prod/product/v2/api-docs", "1.0"));
-		resources.add(swaggerResource("employee-service", "/emp/employee/v2/api-docs", "1.0"));
+		resources.add(swaggerResource("product-service", "/prod/v2/api-docs", "1.0"));
+		resources.add(swaggerResource("employee-service", "/emp/v2/api-docs", "1.0"));
 		
 		return resources;
 	}

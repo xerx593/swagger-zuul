@@ -2,8 +2,6 @@ spring:
   application:
     name: employee-service
 server:
-  servlet:
-    context-path: /employee
   port: 8081
 eureka:
   client:
