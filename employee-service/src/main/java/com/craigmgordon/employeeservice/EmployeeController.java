@@ -1,5 +1,6 @@
 package com.craigmgordon.employeeservice;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
@@ -8,6 +9,7 @@ import java.util.*;
 public class EmployeeController {
 
 	@GetMapping(path = "/employees")
+	@CrossOrigin("http://localhost:20000")
 	public List<Employee> getEmployees() {
 		List<Employee> employees = new ArrayList<Employee>();
 		Employee employee1 = new Employee("John Smith", "035661");
